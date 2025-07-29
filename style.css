@@ -1,0 +1,518 @@
+
+
+.css-selector {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body { 
+    background-color:rgb(34, 95, 118);
+    margin: 0;
+    color: #ededed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    font-family: 'Poppins', sans-serif;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background:transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: aliceblue;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color:rgb(234, 234, 236);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color:rgb(237, 133, 14)
+}
+
+.home {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 102%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(164, 201, 232);
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color:black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(1):hover {
+    color: white;
+}
+
+.btn-box a:nth-child(1)::before {
+    background: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: white;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: black;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+/*Styles for About Me Page*/
+
+.homeB {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center; /* Optional: makes paragraph & heading centered */
+}
+
+
+.home-contentB {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.home-contentB h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-contentB h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 102%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-contentB h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(164, 201, 232);
+}
+
+.home-contentB h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.home-contentB p {
+    position: relative;
+    font-size: 14px;
+    margin: 20px 0 40px;
+}
+
+.home-contentB p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+}
+
+.home-contentB .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-contentB .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    background: rgb(34, 95, 118);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.profile-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*Styles for What I'm Working On Page*/
+
+.projects {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 80vh;
+    display:inline-flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.collapsible {
+    background-color: #00abf0;
+    color: bisque;
+    cursor: pointer;
+    padding: auto;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 32px;
+}
+
+
+.projDesc {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+/* Flex container for image + text */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* Makes it mobile friendly */
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Ensure fade-in starts invisible */
+.home-contentB,
+.image-container {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Style the image */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Hide and Seek Page Styles ========== */
+
+.hide-body {
+    margin: 0;
+    background-color:rgb(34, 95, 118);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    cursor: crosshair;
+}
+
+.hide-title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    animation: hide-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes hide-glow {
+    from {
+        text-shadow: 0 0 10px #2ec4b6, 0 0 20px #2ec4b6;
+    }
+    to {
+        text-shadow: 0 0 20px #ff9f1c, 0 0 40px #ffbf69;
+    }
+}
+
+.hide-headshot-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.hide-headshot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+    opacity: 0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.site-footer {
+    padding-top: 150px;
+    background-color: #011627;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer {
+    margin-top: auto;
+}

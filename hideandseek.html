@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hide and Seek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="head.jpg">
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <header class="header">
+        <a href ="#" class="logo">Feras Akileh</a>
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <!--<a href="wiwo.html">What I'm Working On</a>-->
+            <a href="hideandseek.html" class="active">Hide and Seek</a>
+        </nav>
+    </header>
+
+    <body class="hide-body">
+  <h1 class="hide-title" style="padding-top: 150px;">Find Me</h1>
+  <div class="hide-headshot-container">
+    <img src="head.jpg" alt="Feras Akileh" class="hide-headshot" id="hide-headshot" />
+  </div>
+
+  <script>
+    const headshot = document.getElementById("hide-headshot");
+
+    function getRandomPosition() {
+      const padding = 100;
+      const maxX = window.innerWidth - padding;
+      const maxY = window.innerHeight - padding;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+      return { x: randomX, y: randomY };
+    }
+
+    function moveHeadshot() {
+      const { x, y } = getRandomPosition();
+      const scale = 0.8 + Math.random() * 0.6;
+      const rotation = Math.floor(Math.random() * 30 - 15);
+
+      headshot.style.transform = `translate(${x}px, ${y}px) scale(${scale}) rotate(${rotation}deg)`;
+      headshot.style.opacity = 1;
+
+      setTimeout(() => {
+        headshot.style.opacity = 0;
+      }, 1000);
+    }
+
+    setInterval(moveHeadshot, 2000);
+
+    window.addEventListener("resize", moveHeadshot);
+  </script>
+  <footer class="site-footer">
+    <p>&copy; 2025 Feras Akileh</p>
+</footer>
+</body>
+</html>

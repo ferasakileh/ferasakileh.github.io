@@ -1,0 +1,58 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="head.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href ="#" class="logo">Feras Akileh</a>
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <!--<a href="wiwo.html">What I'm Working On</a>-->
+            <a href="hideandseek.html">Hide and Seek</a>
+        </nav>
+    </header>
+
+    <section class="projects">
+
+        <h1>My Projects</h1>
+        <button type="button" class="collapsible">The Blackjack Troll</button>
+        <div class="projDesc">
+            <p>The Blackjack Troll is a Matlab based blackjack game that incorporates a story element with the classic card game. The program starts by gathering some information from the user. After that, it displays the story and explains the objective of the game to the user, lets the user play as many as they want, then it will display the final scores at the end. The program uses while loops, for loops, the fprintf, input, and randi functions in Matlab to create a game that doesn’t feel repetitive and excites the player every time. The fresh twist on the classic game reinvigorates the interest of the user to play it.</p>
+        </div>
+
+
+    </section>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i=0; i<coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        })
+    }
+    </script>
+
+    <footer class="site-footer">
+    <p>&copy; 2025 Feras Akileh</p>
+</footer>
+
+
+</body>
+</html>
