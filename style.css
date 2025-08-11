@@ -84,6 +84,8 @@ body {
 
 .home-content {
   max-width: 600px;
+  width: 90%;  /* allow shrinking on smaller screens */
+  margin: 0 auto;
 }
 
 .home-content h1,
@@ -154,9 +156,10 @@ body {
 
 /* Buttons styling */
 .btn-box a {
-    flex: 1 1 auto;           /* Buttons grow/shrink equally */
-    min-width: 180px;         /* Prevent too narrow buttons */
+    flex: 1 1 180px;           /* Buttons grow/shrink equally */
+    min-width: 150px;         /* Prevent too narrow buttons */
     white-space: nowrap;      /* Prevent line wrapping */
+    margin-bottom: 10px;
     background: transparent;
     border: 2px solid #00abf0;
     border-radius: 8px;
@@ -203,6 +206,9 @@ body {
   width: 40px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-left: 40px;
 }
 
 .home-sci::before {
@@ -365,6 +371,10 @@ body {
   height: 50px;
 }
 
+.btn-box {
+  flex-wrap: wrap; /* allow buttons to wrap on smaller screens */
+}
+
 .home-contentB .btn-box::before {
   content: '';
   position: absolute;
@@ -506,4 +516,24 @@ body {
 
 .site-footer p {
   margin: 0;
+}
+
+/* ===================================
+   Device Responsiveness
+=================================== */
+
+body {
+  padding-top: 50px; /* desktop spacing */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* tighter spacing on tablets/phones */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px; /* iPhones */
+  }
 }
